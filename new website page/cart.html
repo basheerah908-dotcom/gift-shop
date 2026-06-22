@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Cart - Craft Collection</title>
+
+<style>
+body{
+font-family:Arial;
+background:#fff0f5;
+margin:0;
+padding:20px;
+text-align:center;
+}
+
+h1{
+color:#ff4d88;
+}
+
+.cart-box{
+background:white;
+padding:20px;
+border-radius:20px;
+max-width:500px;
+margin:auto;
+box-shadow:0 0 10px rgba(0,0,0,0.1);
+}
+
+button{
+background:#ff4d88;
+color:white;
+border:none;
+padding:12px 20px;
+border-radius:30px;
+cursor:pointer;
+margin-top:15px;
+}
+
+a{
+text-decoration:none;
+color:white;
+}
+
+
+/* Premium Cart Design */
+
+.cart-box{
+background:white;
+padding:40px;
+border-radius:35px;
+max-width:650px;
+margin:40px auto;
+box-shadow:0 10px 35px rgba(255,77,136,0.15);
+}
+
+.cart-item{
+background:#fff0f5;
+padding:25px;
+margin:20px 0;
+border-radius:25px;
+box-shadow:0 5px 15px rgba(0,0,0,0.08);
+}
+
+.cart-item img{
+width:150px;
+border-radius:20px;
+margin-bottom:15px;
+}
+
+.cart-item b{
+font-size:30px;
+color:#333;
+}
+
+.cart-item p{
+font-size:28px;
+color:#ff4d88;
+font-weight:bold;
+}
+
+.remove-btn{
+background:#ff4d88;
+padding:14px 28px;
+border:none;
+border-radius:30px;
+color:white;
+font-size:16px;
+cursor:pointer;
+}
+
+.action-btn{
+display:inline-block;
+background:#ff4d88;
+color:white;
+padding:16px 35px;
+border-radius:35px;
+text-decoration:none;
+margin:15px;
+font-size:18px;
+font-weight:bold;
+}
+</style>
+
+</head>
+<body>
+
+<h1>🛒 Your Cart</h1>
+
+<div class="cart-box">
+
+<h2 id="itemCount"></h2>
+
+<h3 id="totalPrice"></h3>
+
+<br><br>
+
+<a href="index.html"
+class="action-btn">
+
+⬅ Go Back
+
+</a>
+
+<a href="checkout.html"
+class="action-btn">
+
+Proceed To Checkout 💗
+
+</a>
+
+<br><br>
+
+<a href="checkout.html">
+
+<button>
+Proceed To Checkout 💗
+</button>
+
+</a>
+
+</div>
+
+<script>
+
+let cartItems =
+JSON.parse(
+localStorage.getItem(
+"cartItems"
+)
+) || [];
+
+let total = 0;
+
+let html = "";
+
+cartItems.forEach(
+(item,index) => {
+
+total +=
+parseInt(item.price);
+
+html += `
+
+<div class="cart-item">
+
+<img src="${item.image}">
+
+<br>
+
+<b>${item.name}</b>
+
+<p>₹${item.price}</p>
+
+<button class="remove-btn"
+onclick="removeItem(${index})">
+
+Remove ❌
+
+</button>
+
+</div>
+
+`;
+
+});
+
+document.getElementById(
+"itemCount"
+).innerHTML =
+html;
+
+document.getElementById(
+"totalPrice"
+).innerHTML =
+"Total: ₹" + total;
+
+function removeItem(index){
+
+cartItems.splice(
+index,1
+);
+
+localStorage.setItem(
+"cartItems",
+JSON.stringify(
+cartItems
+)
+);
+
+location.reload();
+
+}
+
+</script>
+
+
+</body>
+</html>

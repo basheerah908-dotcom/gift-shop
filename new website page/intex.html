@@ -1,0 +1,1981 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Craft Collection</title>
+
+<link rel="stylesheet" href="style.css">
+
+<link rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+
+<link href="https://fonts.googleapis.com/css2?family=playfair display&display=swap" rel="stylesheet">
+</head>
+<body>
+
+<!-- Loading Screen -->
+<div id="loader">
+    <div class="loader-logo"> Cc</div>
+
+<h1>  </h1>
+<p>Loading Gifts...</p>
+
+</div>
+
+<!-- Navbar -->
+<header>
+    <div class="logo">
+        💗 Craft Collection
+    </div>
+
+    <div class="search-box">
+        <input type="text" id="searchInput"
+        placeholder="Search Birthday Gift , wallet , Frame...">
+        <i class="fas fa-search"></i>
+    </div>
+
+    <div class="nav-icons">
+
+        <button onclick="openLogin()"
+        class="login-btn">
+        Login
+        </button>
+
+        <button id="darkModeBtn">
+🌙 Dark
+</button>
+
+<p id="userName"></p>
+
+ <a href="cart.html" class="cart">
+
+<i class="fas fa-shopping-cart"></i>
+
+<span>Cart (0)</span>
+
+</a>
+
+    </div>
+</header>
+
+<!-- Flipkart Style Banner -->
+
+<section class="banner-section">
+
+<div class="banner-grid">
+
+<div class="big-banner">
+
+<img id="mainBanner"
+src="images/gift1.jpg.jpeg">
+
+</div>
+
+<div class="small-banner">
+<img src="images/gift2.jpg.jpeg">
+</div>
+
+<div class="small-banner">
+<img src="images/gift3.jpg.jpeg">
+</div>
+
+</div>
+
+</section>
+
+<!-- Categories -->
+<section class="categories">
+
+<h2>Gift Categories</h2>
+
+
+<div class="category-box">
+
+<div class="cat-card">
+<div class="cat-icon">🎂</div>
+<p>Birthday</p>
+</div>
+
+<div class="cat-card">
+<div class="cat-icon">💑</div>
+<p>Couple</p>
+</div>
+
+<div class="cat-card">
+<div class="cat-icon">🖼</div>
+<p>Frames</p>
+</div>
+
+<div class="cat-card">
+<div class="cat-icon">🎁</div>
+<p>Gift Box</p>
+</div>
+
+<div class="cat-card">
+<div class="cat-icon">💐</div>
+<p>Bouquet</p>
+</div>
+
+<div class="cat-card">
+<div class="cat-icon">💝</div>
+<p>Premium</p>
+</div>
+
+</div>
+</div>
+
+</section>
+
+<!-- Products -->
+<section class="products">
+
+<h2>Customized Gift</h2>
+
+
+<div class="filter-buttons">
+
+<button onclick="filterProduct('all')">
+All
+</button>
+
+<button onclick="filterProduct('birthday')">
+🎂 Birthday gift
+</button>
+
+<button onclick="filterProduct('Couple')">
+💑 Couple gift
+</button>
+
+<button onclick="filterProduct('frame')">
+🖼 Photoframe
+</button>
+
+<button onclick="filterProduct('premium')">
+💝 Premium
+</button>
+
+<button onclick="filterProduct('Hamper')">
+💝 Hamper
+</button>
+
+<button onclick="filterProduct('Bouquet')">
+💝 Bouquet
+</button>
+
+<button onclick="filterProduct('Flower Bouquet')">
+🌹 Flower Bouquet
+</button>
+
+<button onclick="filterProduct('Mini Gift Box')">
+🌹 Mini Gift Box 
+</button>
+
+</div>
+
+
+
+
+<div class="product-container">
+
+
+<!-- Product 1 -->
+<div class="product-card"
+data-category="birthday"
+data-name="Gift Box"
+data-price="800"
+onclick="window.location='product.html'">
+
+
+
+<img src="images/gift1.jpg.jpeg">
+
+
+<h3>Gift Box</h3>
+<p>₹800</p>
+
+<button>Add to Cart</button>
+
+<a class="buy-btn"
+href="https://wa.me/919747508329">
+
+Buy Now
+
+</a>
+
+<a href="https://wa.me/919747508329">
+Order on WhatsApp
+</a>
+</div>
+
+<!-- Product 2 -->
+<div class="product-card"
+data-category="birthday"
+data-name="Birthday Box"
+data-price="300">
+<img src="images/gift2.jpg.jpeg">
+<h3>Birthday Box</h3>
+<p>₹300</p>
+
+<button>Add to Cart</button>
+
+<a class="buy-btn"
+href="https://wa.me/919747508329">
+
+Buy Now
+
+</a>
+
+<a href="https://wa.me/919747508329">
+Order on WhatsApp
+</a>
+</div>
+
+<!-- Product 3 -->
+<div class="product-card"
+data-category="Wallet"
+data-name="Wallet Gift"
+data-price="380">
+<img src="images/gift3.jpg.jpeg">
+<h3>Wallet Gift</h3>
+<p>₹380</p>
+
+<button>Add to Cart</button>
+
+<a class="buy-btn"
+href="https://wa.me/919747508329">
+
+Buy Now
+
+</a>
+
+<a href="https://wa.me/919747508329">
+Order on WhatsApp
+</a>
+</div>
+
+<!-- Product 4 -->
+<div class="product-card"
+data-category="frame"
+data-name="Premium Gift"
+data-price="2000">
+<img src="images/gift4.jpg.jpeg">
+<h3>Premium Gift</h3>
+<p>₹2000</p>
+
+<button>Add to Cart</button>
+
+<a class="buy-btn"
+href="https://wa.me/919747508329">
+
+Buy Now
+
+</a>
+
+<a href="https://wa.me/919747508329">
+Order on WhatsApp
+</a>
+</div>
+
+<!-- Product 5 -->
+<div class="product-card"
+data-category="birthday"
+data-name="Gift Combo"
+data-price="1700">
+<img src="images/gift5.png.jpeg">
+<h3>Gift Combo</h3>
+<p>₹900</p>
+
+<button>Add to Cart</button>
+
+<a class="buy-btn"
+href="https://wa.me/919747508329">
+
+Buy Now
+
+</a>
+
+<a href="https://wa.me/919747508329">
+Order on WhatsApp
+</a>
+</div>
+
+<!-- Product 6 -->
+<div class="product-card"
+data-category="birthday"
+data-name="Birthday Frame"
+data-price="250">
+<img src="images/gift6.jpg.jpeg">
+<h3>Birthday Frame</h3>
+<p>₹250</p>
+
+<button>Add to Cart</button>
+
+<a class="buy-btn"
+href="https://wa.me/919747508329">
+
+Buy Now
+
+</a>
+
+<a href="https://wa.me/919747508329">
+Order on WhatsApp
+</a>
+</div>
+
+<!-- Product 7 -->
+<div class="product-card"
+data-category="Photo frame"
+data-name="Photo Frame"
+data-price="250">
+<img src="images/gift7.png.jpeg">
+<h3>Photo Frame</h3>
+<p>₹250</p>
+
+<button>Add to Cart</button>
+
+<a class="buy-btn"
+href="https://wa.me/919747508329">
+
+Buy Now
+
+</a>
+
+<a href="https://wa.me/919747508329">
+Order on WhatsApp
+</a>
+</div>
+
+
+<!-- Product 8 -->
+<div class="product-card"
+data-category="birthday"
+data-name="Photo frame"
+data-price="300">
+
+<img src="images/gift8.png.jpeg">
+
+<h3>Photo frame</h3>
+
+<p>₹300</p>
+
+<button>Add to Cart</button>
+
+<a class="buy-btn"
+href="https://wa.me/919747508329">
+
+Buy Now
+
+</a>
+
+<a href="https://wa.me/919747508329">
+Order on WhatsApp
+</a>
+
+</div>
+
+
+<!-- Product 9 -->
+<div class="product-card"
+data-category="Photo frame"
+data-name="Love Frame"
+data-price="450">
+
+<img src="images/gift9.png.jpeg">
+
+<h3>Love Frame</h3>
+
+<p>₹450</p>
+
+<button>Add to Cart</button>
+
+<a class="buy-btn"
+href="https://wa.me/919747508329">
+
+Buy Now
+
+</a>
+
+<a href="https://wa.me/919747508329">
+Order on WhatsApp
+</a>
+
+</div>
+
+
+<!-- Product 10 -->
+<div class="product-card"
+data-category="birthday gift"
+data-name="Couple Gift"
+data-price="700">
+
+<img src="images/gift10.png.jpeg">
+
+<h3>Couple Gift</h3>
+
+<p>₹700</p>
+
+<button>Add to Cart</button>
+
+<a class="buy-btn"
+href="https://wa.me/919747508329">
+
+Buy Now
+
+</a>
+
+<a href="https://wa.me/919747508329">
+Order on WhatsApp
+</a>
+
+</div>
+
+
+<!-- Product 11 -->
+<div class="product-card"
+data-category="Photo frame"
+data-name="Love Frame"
+data-price="450">
+
+<img src="images/gift11.png.jpeg">
+
+<h3>Love Frame</h3>
+
+<p>₹450</p>
+
+<button>Add to Cart</button>
+
+<a class="buy-btn"
+href="https://wa.me/919747508329">
+
+Buy Now
+
+</a>
+
+<a href="https://wa.me/919747508329">
+Order on WhatsApp
+
+</a>
+
+</div>
+
+<!-- Product 12 -->
+<div class="product-card"
+data-category="Photo frame"
+data-name="Love Frame"
+data-price="450">
+
+<img src="images/gift12.png.jpeg">
+
+<h3>Love Frame</h3>
+
+<p>₹450</p>
+
+<button>Add to Cart</button>
+
+<a class="buy-btn"
+href="https://wa.me/919747508329">
+
+Buy Now
+
+</a>
+
+<a href="https://wa.me/919747508329">
+Order on WhatsApp
+</a>
+
+</div>
+
+<!-- Product 13 -->
+<div class="product-card"
+data-category="Photo frame"
+data-name="Love Frame"
+data-price="450">
+
+<img src="images/gift13.png.jpeg">
+
+<h3>Love Frame</h3>
+
+<p>₹450</p>
+
+<button>Add to Cart</button>
+
+<a class="buy-btn"
+href="https://wa.me/919747508329">
+
+Buy Now
+
+</a>
+
+<a href="https://wa.me/919747508329">
+Order on WhatsApp
+</a>
+
+</div>
+
+<!-- Product 14 -->
+<div class="product-card"
+data-category="birthday"
+data-name="Love Frame"
+data-price="450">
+
+<img src="images/gift14.png.jpeg">
+
+<h3>Love Frame</h3>
+
+<p>₹450</p>
+
+<button>Add to Cart</button>
+
+<a class="buy-btn"
+href="https://wa.me/919747508329">
+
+Buy Now
+
+</a>
+
+<a href="https://wa.me/919747508329">
+Order on WhatsApp
+</a>
+
+</div>
+
+<!-- Product 15 -->
+<div class="product-card"
+data-category="Premium gift"
+data-name="Chocolate tower"
+data-price="450">
+
+<img src="images/gift15.png.jpeg">
+
+<h3>Chocolate tower</h3>
+
+<p>₹450</p>
+
+<button>Add to Cart</button>
+
+<a class="buy-btn"
+href="https://wa.me/919747508329">
+
+Buy Now
+
+</a>
+
+<a href="https://wa.me/919747508329">
+Order on WhatsApp
+</a>
+
+</div>
+
+<!-- Product 16-->
+<div class="product-card"
+data-category="Shirt hamper"
+data-name="Shirt hamper"
+data-price="1000">
+
+<img src="images/gift16.png.jpeg">
+
+<h3>Shirt hamper</h3>
+
+<p>₹1000</p>
+
+<button>Add to Cart</button>
+
+<a class="buy-btn"
+href="https://wa.me/919747508329">
+
+Buy Now
+
+</a>
+
+<a href="https://wa.me/919747508329">
+Order on WhatsApp
+</a>
+
+</div>
+
+
+<!-- Product 17 -->
+<div class="product-card"
+data-category="birthday"
+data-name="Birthday gift"
+data-price="1450">
+
+<img src="images/gift17.png.jpeg">
+
+<h3>Birthday Gift</h3>
+
+<p>₹1450</p>
+
+<button>Add to Cart</button>
+
+<a class="buy-btn"
+href="https://wa.me/919747508329">
+
+Buy Now
+
+</a>
+
+<a href="https://wa.me/919747508329">
+Order on WhatsApp
+</a>
+
+</div>
+
+
+<!-- Product 18 -->
+<div class="product-card"
+data-category="Photo frame"
+data-name="Eye Frame"
+data-price="150">
+
+<img src="images/gift18.png.jpeg">
+
+<h3>Eye Frame</h3>
+
+<p>₹150</p>
+
+<button>Add to Cart</button>
+
+<a class="buy-btn"
+href="https://wa.me/919747508329">
+
+Buy Now
+
+</a>
+
+<a href="https://wa.me/919747508329">
+Order on WhatsApp
+</a>
+
+</div>
+
+<!-- Product 19 -->
+<div class="product-card"
+data-category="Bouquet"
+data-name="Chocolate Bouquet"
+data-price="300">
+
+<img src="images/gift19.png.jpeg">
+
+<h3>Chocolate Bouquet</h3>
+
+<p>₹300</p>
+
+<button>Add to Cart</button>
+
+<a class="buy-btn"
+href="https://wa.me/919747508329">
+
+Buy Now
+
+</a>
+
+<a href="https://wa.me/919747508329">
+Order on WhatsApp
+</a>
+
+</div>
+
+<!-- Product 20 -->
+<div class="product-card"
+data-category="Bouquet"
+data-name="Flower Bouquet"
+data-price="700">
+
+<img src="images/gift20.png.jpeg">
+
+<h3>Flower Bouquet</h3>
+
+<p>₹700</p>
+
+<button>Add to Cart</button>
+
+<a class="buy-btn"
+href="https://wa.me/919747508329">
+
+Buy Now
+
+</a>
+
+<a href="https://wa.me/919747508329">
+Order on WhatsApp
+</a>
+
+</div>
+
+<!-- Product 21 -->
+<div class="product-card"
+data-category="Surprise Boxes"
+data-name="Gift Box"
+data-price="500">
+
+<img src="images/gift21.png.jpeg">
+
+<h3>Gift Box</h3>
+
+<p>₹500</p>
+
+<button>Add to Cart</button>
+
+<a class="buy-btn"
+href="https://wa.me/919747508329">
+
+Buy Now
+
+</a>
+
+<a href="https://wa.me/919747508329">
+Order on WhatsApp
+</a>
+
+</div>
+
+
+<!-- Product 22 -->
+<div class="product-card"
+data-category="Photo frame"
+data-name="A4 Frame"
+data-price="500">
+
+<img src="images/gift22.png.jpeg">
+
+<h3>A4 Frame</h3>
+
+<p>₹500</p>
+
+<button>Add to Cart</button>
+
+<a class="buy-btn"
+href="https://wa.me/919747508329">
+
+Buy Now
+
+</a>
+
+<a href="https://wa.me/919747508329">
+Order on WhatsApp
+</a>
+
+</div>
+
+<!-- Product 23 -->
+<div class="product-card"
+data-category="Surprise Boxes"
+data-name="Gift Box"
+data-price="450">
+
+<img src="images/gift23.png.jpeg">
+
+<h3>Gift Box</h3>
+
+<p>₹450</p>
+
+<button>Add to Cart</button>
+
+<a class="buy-btn"
+href="https://wa.me/919747508329">
+
+Buy Now
+
+</a>
+
+<a href="https://wa.me/919747508329">
+Order on WhatsApp
+</a>
+
+</div>
+
+
+<!-- Product 24 -->
+<div class="product-card"
+data-category="Photo frame"
+data-name="Mini Frame"
+data-price="150">
+
+<img src="images/gift24.png.jpeg">
+
+<h3>Mini Frame</h3>
+
+<p>₹150</p>
+
+<button>Add to Cart</button>
+
+<a class="buy-btn"
+href="https://wa.me/919747508329">
+
+Buy Now
+
+</a>
+
+<a href="https://wa.me/919747508329">
+Order on WhatsApp
+</a>
+
+</div>
+
+<!-- Product 25 -->
+<div class="product-card"
+data-category="Surprise Boxes"
+data-name="Gift Box"
+data-price="300">
+
+<img src="images/gift25.png.jpeg">
+
+<h3>Gift Box</h3>
+
+<p>₹300</p>
+
+<button>Add to Cart</button>
+
+<a class="buy-btn"
+href="https://wa.me/919747508329">
+
+Buy Now
+
+</a>
+
+<a href="https://wa.me/919747508329">
+Order on WhatsApp
+</a>
+
+</div>
+
+<!-- Product 26 -->
+<div class="product-card"
+data-category="Couple gift"
+data-name="Mini Gift Box"
+data-price="300">
+
+<img src="images/gift26.png.jpeg">
+
+<h3>Mini Gift Box</h3>
+
+<p>₹300</p>
+
+<button>Add to Cart</button>
+
+<a class="buy-btn"
+href="https://wa.me/919747508329">
+
+Buy Now
+
+</a>
+
+<a href="https://wa.me/919747508329">
+Order on WhatsApp
+</a>
+
+</div>
+
+<!-- Product 27 -->
+<div class="product-card"
+data-category="Bouquet"
+data-name="Chocolate Bouquet"
+data-price="170">
+
+<img src="images/gift27.png.jpeg">
+
+<h3>Chocolate Bouquet</h3>
+
+<p>₹170</p>
+
+<button>Add to Cart</button>
+
+<a class="buy-btn"
+href="https://wa.me/919747508329">
+
+Buy Now
+
+</a>
+
+<a href="https://wa.me/919747508329">
+Order on WhatsApp
+</a>
+
+</div>
+
+<!-- Product 28 -->
+<div class="product-card"
+data-category="Bouquet"
+data-name="Bouquet"
+data-price="400">
+
+<img src="images/gift28.png.jpeg">
+
+<h3>Bouquet</h3>
+
+<p>₹400</p>
+
+<button>Add to Cart</button>
+
+<a class="buy-btn"
+href="https://wa.me/919747508329">
+
+Buy Now
+
+</a>
+
+<a href="https://wa.me/919747508329">
+Order on WhatsApp
+</a>
+
+</div>
+
+<!-- Product 29-->
+<div class="product-card"
+data-category="Photo frame"
+data-name="A4 Frame"
+data-price="500">
+
+<img src="images/gift29.png.jpeg">
+
+<h3>A4 Frame</h3>
+
+<p>₹500</p>
+
+<button>Add to Cart</button>
+
+<a class="buy-btn"
+href="https://wa.me/919747508329">
+
+Buy Now
+
+</a>
+
+<a href="https://wa.me/919747508329">
+Order on WhatsApp
+</a>
+
+</div>
+
+<!-- Product 30 -->
+<div class="product-card"
+data-category="Shirt hamper"
+data-name="Frame Hamper"
+data-price="600">
+
+<img src="images/gift30.png.jpeg">
+
+<h3>Frame Hamper</h3>
+
+<p>₹600</p>
+
+<button>Add to Cart</button>
+
+<a class="buy-btn"
+href="https://wa.me/919747508329">
+
+Buy Now
+
+</a>
+
+<a href="https://wa.me/919747508329">
+Order on WhatsApp
+</a>
+
+</div>
+
+<!-- Product 31 -->
+<div class="product-card"
+data-category="Photo frame"
+data-name="A3 Frame"
+data-price="900">
+
+<img src="images/gift31.png.jpeg">
+
+<h3>A3 Frame</h3>
+
+<p>₹900</p>
+
+<button>Add to Cart</button>
+
+<a class="buy-btn"
+href="https://wa.me/919747508329">
+
+Buy Now
+
+</a>
+
+<a href="https://wa.me/919747508329">
+Order on WhatsApp
+</a>
+
+</div>
+
+<!-- Product 32 -->
+<div class="product-card"
+data-category="Photo frame"
+data-name="Birthday Frame"
+data-price="800">
+
+<img src="images/gift32.png.jpeg">
+
+<h3>Birthday Frame</h3>
+
+<p>₹800</p>
+
+<button>Add to Cart</button>
+
+<a class="buy-btn"
+href="https://wa.me/919747508329">
+
+Buy Now
+
+</a>
+
+<a href="https://wa.me/919747508329">
+Order on WhatsApp
+</a>
+
+</div>
+
+
+<!-- Product 33 -->
+<div class="product-card"
+data-category="Photo frame"
+data-name="4*4 inch frame"
+data-price="130">
+
+<img src="images/gift33.png.jpeg">
+
+<h3>4*4 inch frame</h3>
+
+<p>₹130</p>
+
+<button>Add to Cart</button>
+
+<a class="buy-btn"
+href="https://wa.me/919747508329">
+
+Buy Now
+
+</a>
+
+<a href="https://wa.me/919747508329">
+Order on WhatsApp
+</a>
+
+</div>
+
+<!-- Product 34 -->
+<div class="product-card"
+data-category="Couple gift"
+data-name="Gift Box"
+data-price="700">
+
+<img src="images/gift34.png.jpeg">
+
+<h3>Gift Box</h3>
+
+<p>₹700</p>
+
+<button>Add to Cart</button>
+
+<a class="buy-btn"
+href="https://wa.me/919747508329">
+
+Buy Now
+
+</a>
+
+<a href="https://wa.me/919747508329">
+Order on WhatsApp
+</a>
+
+</div>
+
+<!-- Product 35 -->
+<div class="product-card"
+data-category="birthday gift"
+data-name="Birthday Box"
+data-price="700">
+
+<img src="images/gift35.png.jpeg">
+
+<h3>Birthday Box</h3>
+
+<p>₹700</p>
+
+<button>Add to Cart</button>
+
+<a class="buy-btn"
+href="https://wa.me/919747508329">
+
+Buy Now
+
+</a>
+
+<a href="https://wa.me/919747508329">
+Order on WhatsApp
+</a>
+
+</div>
+
+<!-- Product 36 -->
+<div class="product-card"
+data-category="hamper"
+data-name="Trolly Hamper"
+data-price="3000">
+
+<img src="images/gift36.png.jpeg">
+
+<h3>Trolly Hamper</h3>
+
+<p>₹3000</p>
+
+<button>Add to Cart</button>
+
+<a class="buy-btn"
+href="https://wa.me/919747508329">
+
+Buy Now
+
+</a>
+
+<a href="https://wa.me/919747508329">
+Order on WhatsApp
+</a>
+
+</div>
+
+<!-- Product 37 -->
+<div class="product-card"
+data-category="album"
+data-name="Ring album"
+data-price="170">
+
+<img src="images/gift37.png.jpeg">
+
+<h3>Ring album</h3>
+
+<p>₹170</p>
+
+<button>Add to Cart</button>
+
+<a class="buy-btn"
+href="https://wa.me/919747508329">
+
+Buy Now
+
+</a>
+
+<a href="https://wa.me/919747508329">
+Order on WhatsApp
+</a>
+
+</div>
+
+<!-- Product 38 -->
+<div class="product-card"
+data-category="Couple gift"
+data-name="Gift Box"
+data-price="300">
+
+<img src="images/gift38.png.jpeg">
+
+<h3>Gift Box</h3>
+
+<p>₹300</p>
+
+<button>Add to Cart</button>
+
+<a class="buy-btn"
+href="https://wa.me/919747508329">
+
+Buy Now
+
+</a>
+
+<a href="https://wa.me/919747508329">
+Order on WhatsApp
+</a>
+
+</div>
+
+<!-- Product 39 -->
+<div class="product-card"
+data-category="Bouquet"
+data-name="Flower Bouquet"
+data-price="200">
+
+<img src="images/gift39.png.jpeg">
+
+<h3>Flower Bouquet</h3>
+
+<p>₹200</p>
+
+<button>Add to Cart</button>
+
+<a class="buy-btn"
+href="https://wa.me/919747508329">
+
+Buy Now
+
+</a>
+
+<a href="https://wa.me/919747508329">
+Order on WhatsApp
+</a>
+
+</div>
+
+<!-- Product 40 -->
+<div class="product-card"
+data-category="album"
+data-name="Ring album"
+data-price="300">
+
+<img src="images/gift40.png.jpeg">
+
+<h3>Ring calender</h3>
+
+<p>₹300</p>
+
+<button>Add to Cart</button>
+
+<a class="buy-btn"
+href="https://wa.me/919747508329">
+
+Buy Now
+
+</a>
+
+<a href="https://wa.me/919747508329">
+Order on WhatsApp
+</a>
+
+</div>
+
+<!-- Product 41 -->
+<div class="product-card"
+data-category="album"
+data-name="A6 frame"
+data-price="250">
+
+<img src="images/gift41.png.jpeg">
+
+<h3>A6frame</h3>
+
+<p>₹250</p>
+
+<button>Add to Cart</button>
+
+<a class="buy-btn"
+href="https://wa.me/919747508329">
+
+Buy Now
+
+</a>
+
+<a href="https://wa.me/919747508329">
+Order on WhatsApp
+</a>
+
+</div>
+
+<!-- Product 42-->
+<div class="product-card"
+data-category="album"
+data-name="Mini Gift Box "
+data-price="270">
+
+<img src="images/gift42.png.jpeg">
+
+<h3>Mini Gift Box</h3>
+
+<p>₹270</p>
+
+<button>Add to Cart</button>
+
+<a class="buy-btn"
+href="https://wa.me/919747508329">
+
+Buy Now
+
+</a>
+
+<a href="https://wa.me/919747508329">
+Order on WhatsApp
+</a>
+
+</div>
+
+<!-- Product 43 -->
+<div class="product-card"
+data-category="album"
+data-name="A5 Frame  `````````"
+data-price="350">
+
+<img src="images/gift43.png.jpeg">
+
+<h3>A5 Frame </Frame></h3>
+
+<p>₹350</p>
+
+<button>Add to Cart</button>
+
+<a class="buy-btn"
+href="https://wa.me/919747508329">
+
+Buy Now
+
+</a>
+
+<a href="https://wa.me/919747508329">
+Order on WhatsApp
+</a>
+
+</div>
+
+<!-- Product 44 -->
+<div class="product-card"
+data-category="album"
+data-name="Wallet   `````````"
+data-price="350">
+
+<img src="images/gift44.png.jpeg">
+
+<h3>Wallet</h3>
+
+<p>₹350</p>
+
+<button>Add to Cart</button>
+
+<a class="buy-btn"
+href="https://wa.me/919747508329">
+
+Buy Now
+
+</a>
+
+<a href="https://wa.me/919747508329">
+Order on WhatsApp
+</a>
+
+</div>
+
+<!-- Product 40 -->
+<div class="product-card"
+data-category="album"
+data-name="Ring album   `````````"
+data-price="300">
+
+<img src="images/gift40.png.jpeg">
+
+<h3>Ring calender</h3>
+
+<p>₹300</p>
+
+<button>Add to Cart</button>
+
+<a class="buy-btn"
+href="https://wa.me/919747508329">
+
+Buy Now
+
+</a>
+
+<a href="https://wa.me/919747508329">
+Order on WhatsApp
+</a>
+
+</div>
+
+
+</div>
+
+<hr style="
+margin-top:80px;
+border:1px solid #272525;
+width:150%;
+">
+
+
+<h2 style="
+text-align:center;
+margin-top:50px;
+color:#ff4d88;
+">
+👗 Dress Collection
+</h2>
+
+<div class="product-container">
+
+<!-- Dress 1 -->
+<div class="product-card"
+data-category="dress"
+data-name="Frock"
+data-price="899">
+
+<img src="images/dress1.png.jpeg">
+
+<h3>Frock</h3>
+
+<p>₹899</p>
+
+<button>Add to Cart</button>
+
+<a class="buy-btn"
+href="https://wa.me/919747508329">
+
+Buy Now
+
+</a>
+
+<a href="https://wa.me/919747508329">
+Order on WhatsApp
+</a>
+
+</div>
+
+<!-- Dress 2 -->
+<div class="product-card"
+data-category="dress"
+data-name="Frock"
+data-price="699">
+
+<img src="images/dress2.png.jpeg">
+
+<h3>Frock</h3>
+
+<p>₹699</p>
+
+<button>Add to Cart</button>
+
+<a class="buy-btn"
+href="https://wa.me/919747508329">
+
+Buy Now
+
+</a>
+
+<a href="https://wa.me/919747508329">
+Order on WhatsApp
+</a>
+
+</div>
+
+<!-- Dress 3 -->
+<div class="product-card"
+data-category="Frock"
+data-name="Stylish Dress"
+data-price="999">
+
+<img src="images/dress3.png.jpeg">
+
+<h3>Stylish Dress</h3>
+
+<p>₹999</p>
+
+<button>Add to Cart</button>
+
+<a class="buy-btn"
+href="https://wa.me/919747508329">
+
+Buy Now
+
+</a>
+
+<a href="https://wa.me/919747508329">
+Order on WhatsApp
+</a>
+
+</div>
+
+<!-- Dress 4 -->
+<div class="product-card"
+data-category="dress"
+data-name="Frock"
+data-price="499">
+
+<img src="images/dress4.png.jpeg">
+
+<h3>Frock</h3>
+
+<p>₹499</p>
+
+<button>Add to Cart</button>
+
+<a class="buy-btn"
+href="https://wa.me/919747508329">
+
+Buy Now
+
+</a>
+
+<a href="https://wa.me/919747508329">
+Order on WhatsApp
+</a>
+
+</div>
+
+
+<!-- Dress 5 -->
+<div class="product-card"
+data-category="dress"
+data-name="Frock"
+data-price="499">
+
+<img src="images/dress5.png.jpeg">
+
+<h3>Frock</h3>
+
+<p>₹499</p>
+
+<button>Add to Cart</button>
+
+<a class="buy-btn"
+href="https://wa.me/919747508329">
+
+Buy Now
+
+</a>
+
+<a href="https://wa.me/919747508329">
+Order on WhatsApp
+</a>
+
+</div>
+
+
+<!-- Dress 6  -->
+<div class="product-card"
+data-category="dress"
+data-name="Frock"
+data-price="499">
+
+<img src="images/dress6.png.jpeg">
+
+<h3>Frock</h3>
+
+<p>₹499</p>
+
+<button>Add to Cart</button>
+
+<a class="buy-btn"
+href="https://wa.me/919747508329">
+
+Buy Now
+
+</a>
+
+<a href="https://wa.me/919747508329">
+Order on WhatsApp
+</a>
+
+</div>
+
+
+<!-- Dress 7 -->
+<div class="product-card"
+data-category="dress"
+data-name="Frock"
+data-price="499">
+
+<img src="images/dress7.png.jpeg">
+
+<h3>Frock</h3>
+
+<p>₹499</p>
+
+<button>Add to Cart</button>
+
+<a class="buy-btn"
+href="https://wa.me/919747508329">
+
+Buy Now
+
+</a>
+
+<a href="https://wa.me/919747508329">
+Order on WhatsApp
+</a>
+
+</div>
+
+<!-- Dress 8 -->
+<div class="product-card"
+data-category="dress"
+data-name="Skirt"
+data-price="499">
+
+<img src="images/dress8.png.jpeg">
+
+<h3>Skirt</h3>
+
+<p>₹499</p>
+
+<button>Add to Cart</button>
+
+<a class="buy-btn"
+href="https://wa.me/919747508329">
+
+Buy Now
+
+</a>
+
+<a href="https://wa.me/919747508329">
+Order on WhatsApp
+</a>
+
+</div>
+
+<!-- Dress 9 -->
+<div class="product-card"
+data-category="dress"
+data-name="Cotton Frock"
+data-price="499">
+
+<img src="images/dress9.png.jpeg">
+
+<h3>Cotton Frock</h3>
+
+<p>₹499</p>
+
+<button>Add to Cart</button>
+
+<a class="buy-btn"
+href="https://wa.me/919747508329">
+
+Buy Now
+
+</a>
+
+<a href="https://wa.me/919747508329">
+Order on WhatsApp
+</a>
+
+</div>
+
+<!-- Dress 10 -->
+<div class="product-card"
+data-category="dress"
+data-name="crope with plazzo]"
+data-price="499">
+
+<img src="images/dress10.png.jpeg">
+
+<h3>crope with plazz</h3>
+
+<p>₹499</p>
+
+<button>Add to Cart</button>
+
+<a class="buy-btn"
+href="https://wa.me/919747508329">
+
+Buy Now
+
+</a>
+
+<a href="https://wa.me/919747508329">
+Order on WhatsApp
+</a>
+
+</div>
+
+<!-- Dress 11 -->
+<div class="product-card"
+data-category="dress"
+data-name="Frock"
+data-price="499">
+
+<img src="images/dress11.png.jpeg">
+
+<h3>Frock</h3>
+
+<p>₹499</p>
+
+<button>Add to Cart</button>
+
+<a class="buy-btn"
+href="https://wa.me/919747508329">
+
+Buy Now
+
+</a>
+
+<a href="https://wa.me/919747508329">
+Order on WhatsApp
+</a>
+
+</div>
+
+<!-- Dress 12 -->
+<div class="product-card"
+data-category="dress"
+data-name="Frock"
+data-price="499">
+
+<img src="images/dress12.png.jpeg">
+
+<h3>Skirt</h3>
+
+<p>₹499</p>
+
+<button>Add to Cart</button>
+
+<a class="buy-btn"
+href="https://wa.me/919747508329">
+
+Buy Now
+
+</a>
+
+<a href="https://wa.me/919747508329">
+Order on WhatsApp
+</a>
+
+</div>
+
+<!-- Dress 13 -->
+<div class="product-card"
+data-category="dress"
+data-name="Frock"
+data-price="499">
+
+<img src="images/dress13.png.jpeg">
+
+<h3>Skirt</h3>
+
+<p>₹499</p>
+
+<button>Add to Cart</button>
+
+<a class="buy-btn"
+href="https://wa.me/919747508329">
+
+Buy Now
+
+</a>
+
+<a href="https://wa.me/919747508329">
+Order on WhatsApp
+</a>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- Login Popup -->
+<div class="login-popup"
+id="loginPopup">
+
+<div class="login-box">
+
+<span onclick="closeLogin()">
+
+</span>
+
+<h2>Login</h2>
+
+<p id="formText">
+Welcome Back 💗
+</p>
+
+<input type="text"
+placeholder="Enter Username">
+
+<input type="password"
+placeholder="Password">
+
+<input type="text"
+id="otpInput"
+placeholder="Enter OTP"
+style="display:none;">
+
+<button id="otpBtn"
+onclick="sendOTP()">
+Send OTP
+</button>
+
+<button>Login</button>
+
+<p id="toggleText">
+
+Don't have account?
+
+<span onclick="toggleForm()">
+Sign Up
+</span>
+
+</p>
+
+</div>
+</div>
+
+<!-- Offer Section -->
+<section class="offer-section">
+
+<h2>Special Offers 💗</h2>
+
+<div class="offer-box">
+
+<div class="offer-card">
+<h3>Birthday Gifts</h3>
+<p>Up to 50% OFF 🎂</p>
+</div>
+
+<div class="offer-card">
+<h3>Premium Gifts</h3>
+<p>Special Discount 💝</p>
+</div>
+
+<div class="offer-card">
+<h3>Wallet Gifts</h3>
+<p>Buy 1 Get Surprise 🎁</p>
+</div>
+
+
+</div>
+</section>
+
+<!-- Contact Section -->
+
+<section class="contact">
+
+<h2>Contact Us 💗</h2>
+
+<p>📞 WhatsApp:
+9747508329</p>
+
+<p>📍 Tamil Nadu, India</p>
+
+<a href="https://instagram.com">
+Follow Instagram
+</a>
+
+</section>
+
+<!-- Customer Reviews -->
+
+<section class="reviews">
+
+<h2>
+⭐ Customer Reviews
+</h2>
+
+<div class="review-box">
+
+<div class="review-card">
+
+<h3>⭐⭐⭐⭐⭐</h3>
+
+<p>
+"Super gift quality 😍"
+</p>
+
+<b>- Ayesha</b>
+
+</div>
+
+<div class="review-card">
+
+<h3>⭐⭐⭐⭐⭐</h3>
+
+<p>
+"Fast delivery, semma 💗"
+</p>
+
+<b>- Rahman</b>
+
+</div>
+
+<div class="review-card">
+
+<h3>⭐⭐⭐⭐⭐</h3>
+
+<p>
+"Birthday gift romba pidichiruku 🎁"
+</p>
+
+<b>- Fathima</b>
+
+</div>
+
+</div>
+
+<!-- Add Review -->
+
+<div class="review-form">
+
+<h2>Add Your Review 💗</h2>
+
+<input type="text"
+id="customerName"
+placeholder="Your Name">
+
+<textarea
+id="customerReview"
+placeholder="Write your review">
+</textarea>
+
+<button onclick="addReview()">
+Submit Review
+</button>
+
+</div>
+
+</section>
+
+<!-- Footer -->
+<footer>
+
+<h2>💗 Craft Collection</h2>
+
+<p>Make Your Special Moments Beautiful 🎁</p>
+
+<a href="https://wa.me/919747508329">
+Chat on WhatsApp
+</a>
+
+<p class="copy">
+© 2026 Craft Collection | All Rights Reserved
+</p>
+
+</footer>
+
+<!-- Notification -->
+<div id="notification">
+💗 Product Added To Cart
+</div>
+
+<script src="script.js"></script>
+
+<!-- Product Image Popup -->
+
+<div id="imagePopup"
+onclick="closeImage()">
+
+<img id="popupImg">
+
+</div>
+
+<!-- Product Image Popup -->
+
+<div id="imagePopup"
+onclick="closeImage()">
+
+<img id="popupImg">
+
+</div>
+
+<a href="https://wa.me/919747508329"
+class="floating-whatsapp"
+target="_blank">
+
+💬
+
+</a>
+
+
+
+</body>
+</html>
+
+
+
